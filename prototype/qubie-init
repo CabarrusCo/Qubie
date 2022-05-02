@@ -13,7 +13,7 @@
 dir="/usr/local/qubie"
 
 # change this to the WiFi interface you want Qubie to monitor
-interface="wlan1"
+interface="wlan0"
 
 # change this to include your desired command line options
 options="-w whitelist-ouis -e -m 1 -s -B"
