@@ -1,3 +1,13 @@
+Prereqs
+===
+
+* Make sure Kali-pi or a similar OS is installed (make sure it allows for network monitoring)
+* Enable monitoring mode
+* Follow instructions under the `Prototype` folder
+
+
+
+
 Qubie
 ===
 
