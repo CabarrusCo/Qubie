@@ -66,7 +66,7 @@ class Logger(object):
                 self.logfile = open(args.logfile, 'a', 1)
                 self.logfile.write('\n---ID {} STARTING NEW RUN---\n'.format(NETWORK_ADDRESS))
             except IOError:
-                print 'could not open log file {}, proceeding with no log file'.format(logfile)
+                print('could not open log file {}, proceeding with no log file'.format(logfile))
                 self.logfile = None
 
     def log(self, msg):
@@ -84,7 +84,7 @@ class Logger(object):
             self.logfile.write('\n')
 
         else:
-            print entry
+            print(entry)
 
     def flush(self):
         """ Flush the log file, if one is being used. """
@@ -118,7 +118,7 @@ class BTLE(object):
     def update(self, updatemsg):
         """ Update the Bluetooth Low Energy broadcast message to the specified string. """
         try:
-            print >> self.btleproc.stdin, '{}'.format(updatemsg)
+            print ('{}'.format(updatemsg))
         except Exception as exc:
             logger.log('error updating btle service: {}'.format(exc))
 
@@ -553,10 +553,10 @@ def read_oui_list(the_list):
                     for row in macreader:
                         maclist.add(row['Assignment'].lower())
                 except csv.Error:
-                    print "Error reading from OUI data file {}.".format(path)
+                    print("Error reading from OUI data file {}.".format(path))
 
     except (OSError, IOError):
-        print "Error reading OUI data set {}.".format(the_list)
+        print("Error reading OUI data set {}.".format(the_list))
         maclist = set()
     return maclist
 
